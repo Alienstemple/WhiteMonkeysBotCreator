@@ -10,3 +10,7 @@ data class AuthResult(
     @SerialName("refresh_token")
     val refreshToken: String
 )
+
+fun AuthResult.toDomain() {
+
+}

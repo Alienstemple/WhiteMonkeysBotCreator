@@ -1,4 +1,4 @@
-package com.whitemonkeys.botcreator.bot_catalog
+package com.whitemonkeys.botcreator.features.bot_catalog
 
 import androidx.lifecycle.ViewModel
 

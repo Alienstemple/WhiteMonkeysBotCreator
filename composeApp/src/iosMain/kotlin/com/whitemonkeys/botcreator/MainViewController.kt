@@ -1,15 +1,16 @@
 package com.whitemonkeys.botcreator
 
-import androidx.compose.runtime.remember
 import androidx.compose.ui.window.ComposeUIViewController
-import com.whitemonkeys.botcreator.networking.AuthClient
-import com.whitemonkeys.botcreator.networking.createHttpClient
-import com.whitemonkeys.botcreator.onboarding.OnboardingScreen
-import io.ktor.client.engine.darwin.Darwin
+import com.whitemonkeys.botcreator.di.initKoin
+import com.whitemonkeys.botcreator.features.auth.AuthScreen
+import org.koin.compose.KoinContext
 
-fun MainViewController() = ComposeUIViewController {
-    OnboardingScreen(
-        client = remember {
-            AuthClient(createHttpClient(Darwin.create()))
-        })
+fun MainViewController() = ComposeUIViewController(
+    configure = {
+        initKoin()
+    }
+) {
+    KoinContext {
+        AuthScreen()
+    }
 }
