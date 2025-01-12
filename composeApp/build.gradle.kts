@@ -11,6 +11,9 @@ plugins {
 }
 
 kotlin {
+
+    tasks.create("testClasses")
+
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
@@ -59,6 +62,8 @@ kotlin {
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.lifecycle.viewmodel)
             implementation(libs.navigation.compose)
+
+            implementation(libs.napier)
         }
     }
 }

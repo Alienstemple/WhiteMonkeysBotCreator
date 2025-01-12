@@ -21,9 +21,13 @@ import androidx.compose.ui.text.style.TextDecoration
 import com.whitemonkeys.botcreator.uikit.SimpleButton
 import com.whitemonkeys.botcreator.uikit.black
 import com.whitemonkeys.botcreator.uikit.white
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.annotation.KoinExperimentalAPI
+import whitemonkeysbotcreator.composeapp.generated.resources.Res
+import whitemonkeysbotcreator.composeapp.generated.resources.auth_create_account
+import whitemonkeysbotcreator.composeapp.generated.resources.auth_hello
 
 @OptIn(KoinExperimentalAPI::class)
 @Composable
@@ -38,8 +42,8 @@ fun AuthScreen() {
         verticalArrangement = Arrangement.Center
     ) {
         if (!hasAccount) {
-            Text(text = "Привет!", color = white)
-            Text(text = "Давай создадим аккаунт", color = white)
+            Text(text = stringResource(Res.string.auth_hello), color = white)
+            Text(text = stringResource(Res.string.auth_create_account), color = white)
             TextField("Имя", {})
             TextField("Почта", {})
             TextField("Пароль", {})

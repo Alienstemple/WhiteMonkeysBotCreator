@@ -1,0 +1,9 @@
+<resources>
+    <string name="auth_hello">Привет!</string>
+    <string name="auth_create_account">Давай создадим аккаунт</string>
+<!--    <string name="auth_hello">Привет!</string>-->
+<!--    <string name="auth_hello">Привет!</string>-->
+<!--    <string name="auth_hello">Привет!</string>-->
+
+
+</resources>

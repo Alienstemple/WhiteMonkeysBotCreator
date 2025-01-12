@@ -12,6 +12,7 @@ import whitemonkeysbotcreator.composeapp.generated.resources.aeroport
 import whitemonkeysbotcreator.composeapp.generated.resources.aeroport_bold
 
 private val AeroportFamily = FontFamily(
+//    Font(Res.fonts.PlayfairDisplay.extraBold, FontWeight.Normal),
 //    Font(getFontResourceBytes(Res.font.aeroport), FontWeight.Normal),
 //    Font(Res.font.aeroport_bold, FontWeight.Bold),
 //    Font(Res.font.aeroport_light, FontWeight.Light),
